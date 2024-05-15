@@ -4,7 +4,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from src.handlers import router
 
 
-API_TOKEN = "7198571497:AAFiVFmyzEQkq7HpV-xjYaodusZHCST0DxY"
+API_TOKEN = "7056294094:AAGSIX2jltPWUrl0_E5RkZF3h143ChpHpSk"
 
 
 bot = Bot(token=API_TOKEN)
