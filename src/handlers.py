@@ -9,7 +9,7 @@ import base64
 
 
 router = Router()
-CHANEL_NAME = "@test_chanel_46"
+CHANEL_NAME = "@barrel_token"
 
 
 async def is_referral(message):
