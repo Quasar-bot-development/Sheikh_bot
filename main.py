@@ -3,9 +3,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from src.handlers import router
 
-
 API_TOKEN = "7056294094:AAGSIX2jltPWUrl0_E5RkZF3h143ChpHpSk"
-
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot=bot, storage=MemoryStorage())
@@ -16,7 +14,7 @@ async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
 
-                
+
 if __name__ == "__main__":
     try:
         print('Bot is running...')

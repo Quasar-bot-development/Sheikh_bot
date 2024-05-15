@@ -9,7 +9,7 @@ def add_new_user(user_id, username, referral_link):
             VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', (username, user_id, 0, 0, 0, referral_link, False))
     connection.commit()
-    
+
 
 def add_tokens(user_id, tokens):
     connection = sql.connect('./db/User_db.db')
@@ -21,27 +21,27 @@ def add_tokens(user_id, tokens):
                 ''', (tokens, user_id))
     connection.commit()
 
-    
+
 def add_invitation(user_id):
     connection = sql.connect('./db/User_db.db')
     cursor = connection.cursor()
     cursor.execute('UPDATE Users SET referral_count = referral_count + 1 WHERE user_id = ?', (user_id,))
     connection.commit()
-    
+
 
 def change_subscribed(user_id):
     connection = sql.connect('./db/User_db.db')
     cursor = connection.cursor()
     cursor.execute('UPDATE Users SET subscribed = 1 WHERE user_id = ?', (user_id,))
     connection.commit()
-    
+
 
 def change_subscribed_bonus(user_id):
     connection = sql.connect('./db/User_db.db')
     cursor = connection.cursor()
     cursor.execute('UPDATE Users SET get_subscribed = 1 WHERE user_id = ?', (user_id,))
     connection.commit()
-    
+
 
 def get_balance(user_id):
     connection = sql.connect('./db/User_db.db')
@@ -77,9 +77,10 @@ def is_old(user_id):
     connection = sql.connect('./db/User_db.db')
     cursor = connection.cursor()
     cursor.execute("SELECT 1 FROM Users WHERE user_id = ?", (user_id,))
-    result  = cursor.fetchone()
+    result = cursor.fetchone()
     connection.commit()
     return bool(result)
+
 
 def if_subscribed(user_id):
     connection = sql.connect('./db/User_db.db')

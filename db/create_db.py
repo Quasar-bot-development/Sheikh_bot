@@ -1,7 +1,7 @@
 import sqlite3 as sql
 
 
-connection = sql.connect('./db/User_db.db')
+connection = sql.connect('User_db.db')
 cursor = connection.cursor()
 
 cursor.execute('''
