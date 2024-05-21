@@ -25,11 +25,11 @@ https://github.com/Quasar-telegram-development/Sheikh_bot/assets/83154713/d7bd77
 <br>
 For Windows:
 ```
-git clone https://github.com/Whynot46/Sheikh_bot
+git clone https://github.com/Quasar-bot-development/Sheikh_bot
 ```
 For Linux:
 ```
-sudo git clone https://github.com/Whynot46/Sheikh_bot
+sudo git clone https://github.com/Quasar-bot-development/Sheikh_bot
 ```
 <hr>
 Установите необходимые библиотеки с помощью команды:
